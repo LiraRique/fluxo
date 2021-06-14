@@ -1,0 +1,58 @@
+<link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.0/js/bootstrap.min.js"></script>
+<script src="https://code.jquery.com/jquery-1.11.1.min.js"></script>
+<!------ Include the above in your HEAD tag ---------->
+
+<div class="container">
+    <h1 class="well">Registrar Motorista</h1>
+	<div class="col-lg-12 well">
+	<div class="row">
+			
+					<div class="col-sm-12">
+						<div class="row">
+						<form  method="POST" action="{{url_for('cadastrar_motorista')}}">	
+							<div class="col-sm-4 form-group">
+								<label>Nome</label>
+								<input type="text" name="nome_motorista" placeholder="Digite seu nome completo aqui.." class="form-control" required>
+							</div>
+							<div class="col-sm-4 form-group">
+								<label>CNH</label>
+								<input type="text" name="cnh" placeholder="Digite a cnh aqui.." class="form-control" required>
+							</div>
+                       
+                        
+                            <div class="col-sm-4 form-group">
+                                <label>Endereço</label>
+                                <input type="text" name="endereco" placeholder="Digite o endereço aqui.." class="form-control" required>
+                            </div>
+                        
+						
+							<div class="col-sm-4 form-group">
+								<label>Cidade</label>
+								<input type="text" name="cidade" placeholder="Digite a cidade aqui.." class="form-control" required>
+							</div>	
+							<div class="col-sm-4 form-group">
+								<label>Estado</label>
+								<input type="text" name="estado" placeholder="Digite o estado aqui.." class="form-control" required>
+							</div>	
+							<div class="col-sm-4 form-group">
+								<label>CEP</label>
+								<input type="text" name="cep" placeholder="Digite o cep aqui.." class="form-control" required>
+							</div>		
+									
+							<div class="col-sm-4 form-group">
+								<label>Celular</label>
+								<input type="text" name="celular" placeholder="Digite o numero aqui.." class="form-control" required>
+							</div>		
+							<div class="col-sm-4 form-group">
+								<label>Email</label>
+								<input type="text" name="email" placeholder="Digite aqui o email.." class="form-control" required>
+							</div>	
+						</div>	
+							<button type="submit" class="btn btn-lg btn-success">Salvar</button>	
+							<a href="{{url_for('pagina_fluxo')}}"> <button type="button" class="btn btn-lg btn-danger">Voltar</button></a>				
+							
+						</form> 
+					</div>
+	</div>
+	</div>

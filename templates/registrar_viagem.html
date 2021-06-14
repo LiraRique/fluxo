@@ -1,0 +1,74 @@
+<link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.0/js/bootstrap.min.js"></script>
+<script src="https://code.jquery.com/jquery-1.11.1.min.js"></script>
+<!------ Include the above in your HEAD tag ---------->
+<link href="../static/dashboard/animacao_botao.css" rel="stylesheet">
+
+<div class="container">
+    <h1 class="well">Registrar Viagem</h1>
+	<div class="col-lg-12 well">
+	<div class="row">
+				
+					<div class="col-sm-12">
+						<div class="row">
+						<form  method="POST" action="{{url_for('cadastrar_viagem')}}">	
+							<div class="col-sm-3 form-group">
+								<label>Data Viagem</label>
+								<input type="Date" name="data_viagem"  class="form-control">
+							</div>
+							<div class="col-sm-3 form-group">
+								<label>Motorista</label>
+								<select name="nome_motorista"  class="motorista">
+									<option value="#">Selecione o motorista..</option>
+									{% for exibe_motorista in lista_motorista %}
+									<option value="{{exibe_motorista.id_motorista}}">{{exibe_motorista.nome_motorista}}</option>
+									{% endfor %}
+								</select>
+								</div>
+										
+                            <div class="col-sm-3 form-group">
+                                <label>Local</label>
+                                <input type="text" name="local_viagem" placeholder="Digite o local da viagem.." class="form-control">
+                            </div>
+						
+							<div class="col-sm-3 form-group">
+								<label>Valor da viagem</label>
+								<input type="text" name="valor_viagem" placeholder="Digite o valor da viagem.." class="form-control">
+							</div>	
+							<div class="col-sm-3 form-group">
+								<label>Valor Combustivel</label>
+								<input type="text" name="valor_combustivel" placeholder="Digite o valor gasto de combustivel.." class="form-control">
+							</div>	
+							<div class="col-sm-3 form-group">
+								<label>Valor Pedágio</label>
+								<input type="text" name="valor_pedagio" placeholder="Digite o valor gasto de pedágio.." class="form-control">
+							</div>		
+						
+						
+							<div class="col-sm-3 form-group">
+								<label>Nome Empresa</label>
+								<input type="text" name="nome_empresa" placeholder="Digite o nome da empresa.." class="form-control">
+							</div>
+							<div class="col-sm-3 form-group">
+								<label>Placa Veiculo</label>
+								<select name="placa_veiculo" class="motorista">
+									<option value="#">Selecione a Placa...</option>
+									{% for exibe_placa in lista_placa %}
+									<option value="{{exibe_placa.id_veiculo}}">{{exibe_placa.placa_veiculo}}</option>
+									{% endfor %}
+								</select>
+								</div>
+							</div>	
+							<div class="form-group">
+								<label>Observação</label>
+								<textarea name="observacao" placeholder="Digite alguma ocorrêcia que aconteceu durante a viagem.." rows="2" class="form-control"></textarea>
+							</div>	
+							<button type="submit" class="btn btn-lg btn-success">Salvar</button>	
+							<a href="{{url_for('pagina_fluxo')}}"> <button type="button" class="btn btn-lg btn-danger">Voltar</button></a>				
+						
+					
+                    
+						</form> 
+				</div>
+	</div>
+	</div>
