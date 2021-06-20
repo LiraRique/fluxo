@@ -1,0 +1,41 @@
+.tabela_consulta{
+    margin-top: 10px;
+    width: 75%;
+    margin-left: auto;
+    margin-right: auto;
+}
+.btn{
+    margin-left: auto;
+    margin-right: 200px;
+}
+.usuario{
+    text-align: justify;
+    margin-left: 165px;
+    font-size: 18px;
+    font-weight: bold;
+    display: inline-flex;
+}
+
+
+.footer_teste{
+    margin-left: 691px;
+    margin-top: 100px;
+}
+
+.footer-copyright{
+    text-align: right;
+    font-size: 20px;
+    font-weight: bold;
+    margin-right:500px;
+}
+
+
+.botao_imprimir{
+    padding: 10px 16px;
+    font-size: 13px;
+    border-radius: 6px;
+    margin-left: 1000px;
+    background-color: orange;
+    border-color: orange;
+    font-weight: bold;
+}

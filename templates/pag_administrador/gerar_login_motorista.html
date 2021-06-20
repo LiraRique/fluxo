@@ -1,0 +1,61 @@
+<link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.0/js/bootstrap.min.js"></script>
+<script src="https://code.jquery.com/jquery-1.11.1.min.js"></script>
+<!------ Include the above in your HEAD tag ---------->
+<link href="../static/dashboard/animacao_botao.css" rel="stylesheet">
+
+<div class="container">
+    <h1 class="well">Gerar Login</h1>
+	<div class="col-lg-12 well">
+	<div class="row">
+				
+					<div class="col-sm-12">
+						<div class="row">
+						<form  method="POST" action="{{url_for('cadastrar_login_motorista')}}">	
+							
+							<div class="col-sm-3 form-group">
+								<label>Motorista</label>
+								<select name="nome_motorista"  class="motorista">
+									<option value="#">Selecione o motorista..</option>
+									{% for exibe_motorista in lista_motorista %}
+									<option value="{{exibe_motorista.nome_motorista}}">{{exibe_motorista.nome_motorista}}</option>
+									{% endfor %}
+								</select>
+								</div>
+
+                            <div class="col-sm-3 form-group">
+                                <label>E-mail</label>
+                                <select name="email_motorista"  class="motorista">
+                                    <option value="#">Selecione o E-mail..</option>
+                                    {% for exibe_motorista in lista_motorista %}
+                                    <option value="{{exibe_motorista.email}}">{{exibe_motorista.email}}</option>
+                                    {% endfor %}
+                                </select>
+                            </div>
+
+							<div class="col-sm-3 form-group">
+                                <label>Nivel de Usuario</label>
+                                <select name="tipo_pessoa_name"  class="motorista">
+                                    <option value="#">Selecione</option>
+                                    {% for tipo_pessoa in lista_tipopessoa %}
+                                    <option value="{{tipo_pessoa.id_tipo_pessoa}}">{{tipo_pessoa.descricao}}</option>
+                                    {% endfor %}
+                                </select>
+                            </div>
+
+                            <div class="col-sm-4 form-group">
+								<label>Senha</label>
+								<input type="password" name="senha_motorista" placeholder="Digite sua senha.." class="form-control" required>
+							</div> 
+
+
+                        </div>	
+                        <button type="submit" class="btn btn-lg btn-success">Salvar</button>	
+						<a href="{{url_for('pagina_fluxo_administrador')}}"> <button type="button" class="btn btn-lg btn-danger">Voltar</button></a>				
+						
+					
+                    
+						</form> 
+				</div>
+	</div>
+	</div>
